@@ -1,0 +1,339 @@
+/* Reset domyślnych marginesów i paddingów dla wszystkich elementów, 
+   oraz ustawienie box-sizing na border-box, co ułatwia pracę z układem strony */
+   * {
+    margin: 0; /* Usunięcie domyślnych marginesów */
+    padding: 0; /* Usunięcie domyślnych paddingów */
+    box-sizing: border-box; /* Uwzględnienie paddingów i borderów w szerokości i wysokości elementu */
+}
+
+/* Ustawienie tła dla całej strony */
+body {
+    background-color: #999ab7; /* Kolor tła całej strony */
+}
+
+/* Stylizacja nagłówka */
+header {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 5px; /* Wewnętrzny odstęp (padding) nagłówka */
+    background-color: #191834; /* Ciemne tło nagłówka */
+    margin-bottom: 20px; /* Odstęp od dolnej krawędzi nagłówka */
+}
+
+/* Kolor tekstu nagłówka (h1) oraz odstęp poniżej */
+header h1 {
+    color: #f4d9ff; /* Jasny kolor tekstu nagłówka */
+    margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+}
+
+/* Stylizacja nawigacji w nagłówku */
+header nav ul {
+    list-style: none; /* Usunięcie domyślnych punktów listy */
+    display: flex; /* Wyświetlenie elementów listy w jednej linii */
+    justify-content: center; /* Wyśrodkowanie elementów listy */
+}
+
+/* Stylizacja elementów listy */
+header nav ul li {
+    font-size: 1.5rem; /* Wielkość czcionki */
+    margin-right: 20px; /* Odstęp pomiędzy elementami listy */
+}
+
+/* Stylizacja linków */
+header nav ul li a {
+    text-decoration: none; /* Usunięcie podkreślenia tekstu */
+    color: #f4d9ff; /* Kolor tekstu linku */
+}
+
+/* Zmiana koloru linków przy najechaniu myszką (hover) */
+header nav ul li a:hover {
+    color: #1f7fd5; /* Kolor linku po najechaniu */
+}
+
+/* Stylizacja sekcji planowania podróży */
+.section-plan {
+    background-color: #f4f4f9; /* Jasne tło sekcji */
+    padding: 20px; /* Wewnętrzny odstęp sekcji */
+    border-radius: 10px; /* Zaokrąglone rogi sekcji */
+    max-width: 600px; /* Maksymalna szerokość sekcji */
+    margin: 20px auto; /* Wyśrodkowanie sekcji na stronie z odstępem powyżej i poniżej */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień dla sekcji */
+}
+
+/* Wyśrodkowanie nagłówka w sekcji, ustawienie marginesu dolnego 
+   i rozmiaru czcionki */
+.section-plan h2 {
+    text-align: center; /* Wyśrodkowanie tekstu nagłówka */
+    margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+    font-size: 2rem; /* Wielkość czcionki nagłówka */
+}
+
+/* Stylizacja grup formularza */
+.form-group {
+    margin-bottom: 15px; /* Odstęp poniżej każdej grupy formularza */
+}
+
+/* Stylizacja etykiet formularza */
+.form-group label {
+    display: block; /* Wyświetlenie etykiety jako blok */
+    margin-bottom: 5px; /* Odstęp poniżej etykiety */
+    font-size: 1.2rem; /* Wielkość czcionki etykiety */
+}
+
+/* Stylizacja pól tekstowych i textarea */
+.form-group input, 
+.form-group textarea {
+    width: 100%; /* Pełna szerokość pola */
+    padding: 10px; /* Wewnętrzny odstęp (padding) pola */
+    border: 1px solid #ccc; /* Szare obramowanie pola */
+    border-radius: 5px; /* Zaokrąglone rogi pola */
+    font-size: 1rem; /* Wielkość czcionki */
+}
+
+/* Zmiana koloru obramowania przy fokusie, 
+   usunięcie obramowania focus dla przeglądarek */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f7fd5; /* Kolor obramowania przy fokusie */
+    outline: none; /* Usunięcie domyślnej ramki focus */
+}
+
+/* Wyłączenie możliwości zmiany rozmiaru textarea */
+textarea {
+    resize: none; /* Zablokowanie zmiany rozmiaru textarea */
+}
+
+/* Styl dla kontenera modalnego */
+.modal {
+    display: none; /* Domyślnie ukryte, aby modal nie był widoczny, dopóki nie zostanie wywołany */
+    position: fixed; /* Ustawienie modalnego kontenera na stałe w widoku */
+    z-index: 1000; /* Zapewnia, że modal będzie wyświetlany nad innymi elementami na stronie */
+    left: 0; /* Położenie modalnego kontenera na lewym brzegu ekranu */
+    top: 0; /* Położenie modalnego kontenera na górnym brzegu ekranu */
+    width: 100%; /* Szerokość modalnego kontenera, wypełnia 100% szerokości okna przeglądarki */
+    height: 100%; /* Wysokość modalnego kontenera, wypełnia 100% wysokości okna przeglądarki */
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło, które przyciemnia resztę strony za modalem */
+    justify-content: center; /* Wyrównanie zawartości modalnego kontenera w poziomie do środka */
+    align-items: center; /* Wyrównanie zawartości modalnego kontenera w pionie do środka */
+}
+
+/* Styl dla treści modalnej */
+.modal-content {
+    background-color: #fff; /* Tło dla treści modalnej, białe dla lepszej widoczności */
+    padding: 20px; /* Wewnętrzne odstępy, aby zapewnić przestrzeń wewnątrz modalnego kontenera */
+    border-radius: 10px; /* Zaokrąglenie rogów kontenera treści modalnej */
+    text-align: center; /* Wyśrodkowanie tekstu w modalnej treści */
+    width: 300px; /* Szerokość treści modalnej */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień wokół treści modalnej dla lepszego efektu wizualnego */
+}
+
+/* Styl dla wiadomości alertu */
+#alert-message {
+    font-size: 1.2rem; /* Rozmiar czcionki dla wiadomości alertu */
+    margin-bottom: 20px; /* Odstęp poniżej wiadomości alertu, aby oddzielić ją od innych elementów */
+}
+
+/* Styl dla przycisku zamknięcia alertu */
+#close-alert {
+    background-color: #191834; /* Tło przycisku, ciemny kolor dla kontrastu */
+    color: #f4d9ff; /* Kolor tekstu przycisku, jasny dla dobrego kontrastu z tłem */
+    padding: 10px 20px; /* Wewnętrzne odstępy, aby przycisk był odpowiednio duży */
+    border: none; /* Usunięcie domyślnych krawędzi przycisku */
+    border-radius: 5px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik, aby wskazać, że przycisk jest klikalny */
+    font-size: 1rem; /* Rozmiar czcionki dla tekstu przycisku */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła przycisku podczas najechania kursorem */
+}
+
+/* Styl dla przycisku zamknięcia alertu podczas najechania kursorem */
+#close-alert:hover {
+    background-color: #1f7fd5; /* Zmiana koloru tła przycisku na jaśniejszy, gdy kursor znajduje się nad przyciskiem */
+}
+
+#activity-list {
+    list-style-type: disc; /* Ustawienie listy jako punktowanej */
+}
+
+#activity-list li {
+    background-color: #f4d9ff; /* Ustawienie jasnego tła dla elementów listy */
+    color: #191834; /* Ustawienie koloru tekstu na ciemny */
+    padding: 10px; /* Dodanie wewnętrznego odstępu (padding) */
+    margin-bottom: 5px; /* Dodanie odstępu poniżej każdego elementu listy */
+    border: 1px solid #191834; /* Dodanie ciemnego obramowania wokół elementów listy */
+    border-radius: 5px; /* Zaokrąglenie rogów elementów listy */
+    display: flex; /* Ustawienie elastycznego układu elementu listy (flexbox) */
+    justify-content: space-between; /* Rozstawienie zawartości na boki: tekst po lewej, przycisk po prawej */
+    align-items: center; /* Wyrównanie zawartości pionowo do środka */
+    width: 100%; /* Ustawienie szerokości elementów listy na 100% */
+}
+
+#add-activity {
+    background-color: #f4d9ff; /* Ustawienie jasnego tła dla przycisku "Dodaj" */
+    border: none; /* Usunięcie domyślnego obramowania */
+    padding: 5px 10px; /* Dodanie wewnętrznego odstępu (padding) */
+    color: #191834; /* Ustawienie koloru tekstu na ciemny */
+    border: 1px solid #191834; /* Dodanie ciemnego obramowania wokół przycisku */
+    border-radius: 3px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Ustawienie wskaźnika na kursor ręki (pointer) przy najechaniu myszką */
+    font-size: 0.8rem; /* Ustawienie mniejszego rozmiaru czcionki */
+    width: 100%; /* Ustawienie szerokości przycisku na 100% */
+    margin-top: 10px; /* Dodanie odstępu powyżej przycisku */
+}
+
+#add-activity:hover {
+    background-color: #1f7fd5; /* Zmiana tła na ciemnoniebieskie przy najechaniu myszką */
+    color: #fff; /* Zmiana koloru tekstu na biały przy najechaniu myszką */
+}
+
+#activity-list li button {
+    background-color: #191834; /* Ustawienie ciemnego tła dla przycisku usuwania */
+    border: none; /* Usunięcie domyślnego obramowania */
+    padding: 5px 10px; /* Dodanie wewnętrznego odstępu (padding) */
+    color: #f4d9ff; /* Ustawienie jasnego koloru tekstu */
+    border-radius: 3px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Ustawienie wskaźnika na kursor ręki (pointer) przy najechaniu myszką */
+    font-size: 0.8rem; /* Ustawienie mniejszego rozmiaru czcionki */
+}
+
+#activity-list li button:hover {
+    background-color: #1f7fd5; /* Zmiana tła na ciemnoniebieskie przy najechaniu myszką */
+    color: #fff; /* Zmiana koloru tekstu na biały przy najechaniu myszką */
+}
+
+/* Stylizacja przycisku wysyłania formularza */
+button[type="submit"] {
+    width: 100%; /* Pełna szerokość przycisku */
+    padding: 10px 20px; /* Wewnętrzny padding przycisku */
+    background-color: #191834; /* Ciemne tło przycisku */
+    color: #f4d9ff; /* Jasny kolor tekstu */
+    font-size: 1.2rem; /* Wielkość czcionki przycisku */
+    border: none; /* Usunięcie domyślnej ramki */
+    border-radius: 5px; /* Zaokrąglone rogi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła przy najechaniu */
+}
+
+/* Zmiana koloru tła przy najechaniu myszką na przycisk */
+button[type="submit"]:hover {
+    background-color: #1f7fd5; /* Niebieski kolor tła przy najechaniu */
+}
+
+button[type="reset"] {
+    margin-top: 10px;
+    width: 100%; /* Pełna szerokość przycisku */
+    padding: 10px 20px; /* Wewnętrzny padding przycisku */
+    background-color: #191834; /* Ciemne tło przycisku */
+    color: #f4d9ff; /* Jasny kolor tekstu */
+    font-size: 1.2rem; /* Wielkość czcionki przycisku */
+    border: none; /* Usunięcie domyślnej ramki */
+    border-radius: 5px; /* Zaokrąglone rogi przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła przy najechaniu */
+}
+
+/* Zmiana koloru tła przy najechaniu myszką na przycisk */
+button[type="reset"]:hover {
+    background-color: red; /* Niebieski kolor tła przy najechaniu */
+}
+
+/* Stylizacja sekcji harmonogramu podróży */
+.section-itinerary {
+    background-color: #f4f4f9; /* Jasne tło sekcji */
+    padding: 20px; /* Wewnętrzny odstęp (padding) sekcji */
+    border-radius: 10px; /* Zaokrąglone rogi sekcji */
+    max-width: 600px; /* Maksymalna szerokość sekcji */
+    margin: 20px auto; /* Wyśrodkowanie sekcji na stronie z odstępem powyżej i poniżej */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień dla sekcji */
+}
+
+/* Wyśrodkowanie nagłówka w sekcji harmonogramu, ustawienie marginesu dolnego 
+   i rozmiaru czcionki */
+.section-itinerary h2 {
+    text-align: center; /* Wyśrodkowanie tekstu nagłówka */
+    margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+    font-size: 2rem; /* Wielkość czcionki nagłówka */
+}
+
+/* Stylizacja tekstu informacyjnego: wyśrodkowanie, 
+   font-size oraz margines poniżej */
+#placeholder-text {
+    text-align: center; /* Wyśrodkowanie tekstu */
+    font-size: 1.2rem; /* Rozmiar czcionki */
+    margin-bottom: 20px; /* Odstęp poniżej tekstu */
+}
+
+/* Stylizacja listy harmonogramu: usunięcie domyślnych punktów i paddingu */
+#itinerary-list {
+    list-style-type: none; /* Usunięcie domyślnych punktów listy */
+    padding-left: 0; /* Usunięcie domyślnego paddingu listy */
+}
+
+/* Stylizacja pojedynczych elementów listy */
+#itinerary-list li {
+    background-color: #191834; /* Ciemne tło dla elementów listy */
+    color: #f4d9ff; /* Jasny kolor tekstu */
+    padding: 15px; /* Wewnętrzny odstęp w elemencie */
+    margin-bottom: 10px; /* Odstęp między elementami listy */
+    margin-right: 5px;
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Cień dla elementu listy */
+    display: flex; /* Użycie flexbox do wyrównania zawartości */
+    justify-content: space-between; /* Rozłożenie zawartości na całej szerokości (tekst po lewej, przycisk po prawej) */
+    align-items: center; /* Wyrównanie zawartości pionowo do środka */
+}
+
+/* Stylizacja tekstu w elemencie listy */
+#itinerary-list li span {
+    font-size: 1rem; /* Rozmiar czcionki */
+    color: #f4d9ff; /* Kolor tekstu (taki sam jak reszta elementu) */
+}
+
+/* Stylizacja przycisku usuwania elementu */
+#itinerary-list li button {
+    background-color: #1f7fd5; /* Niebieskie tło przycisku */
+    border: none; /* Usunięcie domyślnej obramówki */
+    padding: 5px 10px; /* Wewnętrzny odstęp przycisku */
+    color: #fff; /* Biały kolor tekstu */
+    border-radius: 3px; /* Zaokrąglenie rogów przycisku */
+    cursor: pointer; /* Zmiana kursora na wskaźnik przy najechaniu myszką */
+    font-size: 0.9rem; /* Rozmiar czcionki przycisku */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła przy najechaniu */
+}
+
+/* Zmiana koloru przycisku przy najechaniu */
+#itinerary-list li button:hover {
+    background-color: #155a99; /* Ciemniejszy niebieski przy najechaniu */
+}
+
+/* Stylizacja sekcji kontaktowej */
+#contact {
+    text-align: center; /* Wyśrodkowanie całej sekcji */
+    padding: 5px; /* Wewnętrzny odstęp */
+    background-color: #191834; /* Ciemne tło sekcji */
+    margin-bottom: 0; /* Brak odstępu poniżej */
+    color: #f4d9ff; /* Jasny kolor tekstu */
+    margin-top: 20px; /* Odstęp od górnej krawędzi */
+}
+
+/* Stylizacja nagłówka sekcji kontaktowej */
+#contact h2 {
+    font-size: 2rem; /* Rozmiar czcionki nagłówka */
+    margin-top: 10px; /* Odstęp powyżej nagłówka */
+    margin-bottom: 10px; /* Odstęp poniżej nagłówka */
+}
+
+/* Stylizacja tekstu w sekcji kontaktowej */
+#contact p {
+    font-size: 1.5rem; /* Rozmiar czcionki */
+    margin-bottom: 10px; /* Odstęp poniżej paragrafu */
+}
+
+/* Stylizacja linków w sekcji kontaktowej */
+#contact p a {
+    color: #f4d9ff; /* Jasny kolor tekstu linku */
+    text-decoration: none; /* Usunięcie podkreślenia */
+}
+
+/* Zmiana koloru linków przy najechaniu */
+#contact p a:hover {
+    color: #1f7fd5; /* Niebieski kolor linku przy najechaniu */
+}

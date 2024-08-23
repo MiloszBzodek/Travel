@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planer podróży</title>
+    <!-- Ikona strony -->
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2016/12/05/03/56/travel-1883060_1280.png" type="image/x-icon">
+    <!-- Link do zewnętrznego pliku CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Nagłówek strony -->
+        <h1>Planer podróży</h1>
+
+        <nav>
+            <ul>
+                <!-- Nawigacja do sekcji strony -->
+                <li><a href="#plan">Zaplanuj podróż</a></li>
+                <li><a href="#itinerary">Twój harmonogram</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="plan" class="section-plan">
+            <!-- Sekcja planowania podróży -->
+            <h2>Zaplanuj swoją podróż</h2>
+
+            <form id="travel-form">
+                <!-- Pole wyboru miejsca docelowego -->
+                <div class="form-group">
+                    <label for="destination">Miejsce docelowe:</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+
+                <!-- Pole wyboru daty rozpoczęcia -->
+                <div class="form-group">
+                    <label for="start-date">Data rozpoczęcia:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+
+                <!-- Pole wyboru daty zakończenia -->
+                <div class="form-group">
+                    <label for="end-date">Data zakończenia:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+
+                <!-- Niestandardowy alert modalny -->
+                <div id="custom-alert" class="modal">
+                    <div class="modal-content">
+                        <p id="alert-message"></p>
+                        <button id="close-alert">OK</button>
+                    </div>
+                </div>
+
+                <!-- Dodawanie aktywności do podróży -->
+                <div class="form-group">
+                    <label for="activity-input">Dodaj aktywność:</label>
+                    <input type="text" id="activity-input" name="activity" placeholder="Dodaj aktywność">
+                    <button type="button" id="add-activity">Dodaj</button>
+                </div>
+
+                <!-- Lista aktywności -->
+                <ul id="activity-list"></ul>
+
+                <!-- Przycisk do wysłania formularza -->
+                <button type="submit" id="submit">Dodaj harmonogram</button>
+
+                <!-- Przycisk do resetowania formularza -->
+                <button type="reset" id="reset">Wyczyść</button>
+            </form>
+        </section>
+
+        <section id="itinerary" class="section-itinerary">
+            <!-- Sekcja wyświetlania harmonogramu podróży -->
+            <h2>Twój harmonogram podróży</h2>
+            <p id="placeholder-text">Dodaj harmonogram podróży.</p>
+            <!-- Lista harmonogramu -->
+            <ul id="itinerary-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <!-- Sekcja kontaktowa -->
+            <h2>Kontakt</h2>
+            <p>Masz pytania? Skontaktuj się z nami:</p>
+            <p>Email: <a href="mailto:kontakt@planerpodrozy.pl">kontakt@planerpodrozy.pl</a></p>
+        </section>
+    </footer>
+
+    <!-- Link do zewnętrznego pliku JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
